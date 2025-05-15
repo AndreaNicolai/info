@@ -2,35 +2,29 @@
 <html lang="it">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Progettazione Fisica della Rete - Ufficio</title>
-
-  <!-- Bootstrap CSS -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
-
+  <!-- Bootstrap 5 CDN -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
   <style>
-    /* Il tuo CSS originale */
     body {
       font-family: "Segoe UI", sans-serif;
       background-color: #f9f5ff;
-      margin: 0;
-      padding: 0;
       color: #3d3d3d;
     }
-
     header {
       background-color: #a06cd5;
       color: white;
-      padding: 30px;
+      padding: 30px 0;
       text-align: center;
     }
-
-    main {
-      padding: 40px;
-      max-width: 1000px;
-      margin: auto;
+    h2 {
+      color: #7a4eb0;
     }
-
+    p.note {
+      font-style: italic;
+      color: #666;
+    }
     .plant-section {
       background-color: white;
       padding: 30px;
@@ -38,33 +32,15 @@
       box-shadow: 0 2px 10px rgba(160, 108, 213, 0.2);
       margin-bottom: 40px;
     }
-
-    h1, h2 {
-      margin-top: 0;
-    }
-
-    h2 {
-      color: #7a4eb0;
-    }
-
-    p.note {
-      font-style: italic;
-      color: #666;
-      margin-bottom: 20px;
-    }
-
     .canva-embed {
       position: relative;
       width: 100%;
-      height: 0;
       padding-top: 56.25%;
-      margin-top: 1.6em;
-      margin-bottom: 0.9em;
       box-shadow: 0 2px 8px rgba(160, 108, 213, 0.2);
       border-radius: 8px;
       overflow: hidden;
+      margin: 1.6em 0;
     }
-
     .canva-embed iframe {
       position: absolute;
       width: 100%;
@@ -73,43 +49,12 @@
       left: 0;
       border: none;
     }
-
-    ul {
-      padding-left: 20px;
-    }
-
-    table {
-      width: 100%;
-      border-collapse: collapse;
-      margin-top: 20px;
-    }
-
-    table th, table td {
-      padding: 12px;
-      border: 1px solid #ddd;
-      text-align: left;
-    }
-
-    table thead {
-      background-color: #e8d1ff;
-    }
-
-    table tbody tr:nth-child(even) {
-      background-color: #f6efff;
-    }
-
-    a {
-      color: #7a4eb0;
-      text-decoration: none;
-    }
-
-    a:hover {
-      text-decoration: underline;
-    }
-
-    /* Per migliorare la responsività della tabella con Bootstrap */
-    .table-responsive {
-      overflow-x: auto;
+    footer {
+      background-color: #a06cd5;
+      color: white;
+      text-align: center;
+      padding: 20px;
+      margin-top: 60px;
     }
   </style>
 </head>
@@ -119,43 +64,38 @@
   <h1>Progettazione Fisica della Rete - Ufficio</h1>
 </header>
 
-<main>
+<main class="container py-5">
 
   <section class="plant-section">
     <h2>Piantina dell'Ufficio</h2>
     <p class="note">
-      Le linee verdi indicano i cavi LAN che si collegano alle prese RJ45. 
-      Nell'ufficio tecnico sono presenti 2 switch e il router principale. 
-      Nelle due sale riunioni è presente una TV. 
-      Nell'ufficio vi sono quattro telecamere e due router configurati come Access Point per garantire copertura Wi-Fi in tutto l'ambiente. 
-      Inoltre ci sono 2 stampanti a disposizione dei dipendenti.
+      Le linee verdi indicano i cavi LAN che si collegano alle prese RJ45...
     </p>
-
     <div class="canva-embed">
-      <iframe loading="lazy" src="https://www.canva.com/design/DAGnOknkwvA/Wxm68D08NN3OtRm3Q21BGw/view?embed" allowfullscreen="allowfullscreen" allow="fullscreen"></iframe>
+      <iframe loading="lazy" src="https://www.canva.com/design/DAGnOknkwvA/Wxm68D08NN3OtRm3Q21BGw/view?embed" allowfullscreen></iframe>
     </div>
   </section>
 
   <section class="plant-section">
     <h2>Scelte Tecniche</h2>
-    <p class="note">Qui sotto sono elencati i principali dispositivi scelti per la rete e le motivazioni della loro adozione:</p>
+    <p class="note">Qui sotto sono elencati i principali dispositivi scelti per la rete...</p>
     <ul>
-      <li><strong>Router principale:</strong> Con sistema a mesh, per garantire una copertura uniforme e affidabile.</li>
+      <li><strong>Router principale:</strong> Sistema a mesh...</li>
       <li><strong>2 Switch:</strong> Per collegare tutte le postazioni cablate.</li>
-      <li><strong>Access Point:</strong> Due router configurati come AP per copertura Wi-Fi estesa.</li>
-      <li><strong>Prese RJ45 e cavi LAN:</strong> Per garantire connessioni stabili ai PC.</li>
+      <li><strong>Access Point:</strong> Due router configurati come AP...</li>
+      <li><strong>Prese RJ45 e cavi LAN:</strong> Connessioni stabili ai PC.</li>
       <li><strong>Telecamere Wi-Fi:</strong> Per la videosorveglianza interna.</li>
-      <li><strong>TV nelle sale riunioni:</strong> Per conferenze e presentazioni.</li>
+      <li><strong>TV nelle sale riunioni:</strong> Per conferenze.</li>
       <li><strong>Stampanti Wi-Fi:</strong> A disposizione dei dipendenti.</li>
     </ul>
   </section>
 
   <section class="plant-section">
     <h2>Preventivo dei Costi</h2>
-    <p class="note">Segue una tabella con i dispositivi da acquistare, il costo stimato e il link diretto al prodotto:</p>
+    <p class="note">Segue una tabella con i dispositivi da acquistare...</p>
     <div class="table-responsive">
-      <table class="table">
-        <thead>
+      <table class="table table-bordered align-middle">
+        <thead class="table-light">
           <tr>
             <th>Dispositivo</th>
             <th>Quantità</th>
@@ -164,22 +104,22 @@
           </tr>
         </thead>
         <tbody>
-          <tr><td>TP-Link Set mesh WLAN Deco PX50 Powerline</td><td>1</td><td>€249,99</td><td><a href="https://amzn.eu/d/d4hPey4" target="_blank">Vai al prodotto</a></td></tr>
-          <tr><td>Switch Tp-link 48 porte</td><td>1</td><td>€273,82</td><td><a href="https://amzn.eu/d/bYYfPcM" target="_blank">Vai al prodotto</a></td></tr>
-          <tr><td>Switch Tp-link 24 porte</td><td>1</td><td>€102,41</td><td><a href="https://amzn.eu/d/4KIlCJ1" target="_blank">Vai al prodotto</a></td></tr>
-          <tr><td>Telecamere Tapo C530WS</td><td>4</td><td>€320</td><td><a href="https://amzn.eu/d/fJwBNP9" target="_blank">Vai al prodotto</a></td></tr>
-          <tr><td>Mr. Tronic Cavo Ethernet Cat 6 da 305m</td><td>1</td><td>€110</td><td><a href="https://amzn.eu/d/4MuD4af" target="_blank">Vai al prodotto</a></td></tr>
-          <tr><td>Prese RJ45</td><td>60</td><td>€678</td><td><a href="https://amzn.eu/d/iLdpsqh" target="_blank">Vai al prodotto</a></td></tr>
-          <tr><td>HP LaserJet Pro MFP 4102dw 2Z622F</td><td>2</td><td>€610</td><td><a href="https://amzn.eu/d/84k4SoX" target="_blank">Vai al prodotto</a></td></tr>
-          <tr><td>Smart TV 50” TCL</td><td>2</td><td>€600</td><td><a href="https://amzn.eu/d/6vSaHAQ" target="_blank">Vai al prodotto</a></td></tr>
-          <tr><td>Supporto per TV a muro</td><td>2</td><td>€140</td><td><a href="https://amzn.eu/d/5xTXJ1j" target="_blank">Vai al prodotto</a></td></tr>
-          <tr><td>Kit crimpatura cavi con tester</td><td>1</td><td>€45,99</td><td><a href="https://amzn.eu/d/cwsFNTq" target="_blank">Vai al prodotto</a></td></tr>
-          <tr><td>Fascette per i cavi</td><td>1</td><td>€7,99</td><td><a href="https://amzn.eu/d/asO3wVq" target="_blank">Vai al prodotto</a></td></tr>
-          <tr><td>Servizio cloud premium videocamere</td><td>1 anno</td><td>€110,99</td><td><a href="https://www.tapo.com/it//tapocare/" target="_blank">Vai al prodotto</a></td></tr>
-          <tr><td>Canalina a rete</td><td>25</td><td>€287,25 (25 pezzi a €11,49 ciascuno)</td><td><a href="https://amzn.eu/d/29h7AYV" target="_blank">Vai al prodotto</a></td></tr>
-          <tr>
+          <tr><td>TP-Link Set mesh WLAN Deco PX50</td><td>1</td><td>€249.99</td><td><a href="https://amzn.eu/d/d4hPey4" target="_blank">Vai</a></td></tr>
+          <tr><td>Switch Tp-link 48 porte</td><td>1</td><td>€273.82</td><td><a href="https://amzn.eu/d/bYYfPcM" target="_blank">Vai</a></td></tr>
+          <tr><td>Switch Tp-link 24 porte</td><td>1</td><td>€102.41</td><td><a href="https://amzn.eu/d/4KIlCJ1" target="_blank">Vai</a></td></tr>
+          <tr><td>Telecamere Tapo C530WS</td><td>4</td><td>€320</td><td><a href="https://amzn.eu/d/fJwBNP9" target="_blank">Vai</a></td></tr>
+          <tr><td>Cavo Ethernet Cat 6 - 305m</td><td>1</td><td>€110</td><td><a href="https://amzn.eu/d/4MuD4af" target="_blank">Vai</a></td></tr>
+          <tr><td>Prese RJ45</td><td>60</td><td>€678</td><td><a href="https://amzn.eu/d/iLdpsqh" target="_blank">Vai</a></td></tr>
+          <tr><td>Stampante HP LaserJet</td><td>2</td><td>€610</td><td><a href="https://amzn.eu/d/84k4SoX" target="_blank">Vai</a></td></tr>
+          <tr><td>TV TCL 50”</td><td>2</td><td>€600</td><td><a href="https://amzn.eu/d/6vSaHAQ" target="_blank">Vai</a></td></tr>
+          <tr><td>Supporto per TV</td><td>2</td><td>€140</td><td><a href="https://amzn.eu/d/5xTXJ1j" target="_blank">Vai</a></td></tr>
+          <tr><td>Kit crimpatura cavi</td><td>1</td><td>€45.99</td><td><a href="https://amzn.eu/d/cwsFNTq" target="_blank">Vai</a></td></tr>
+          <tr><td>Fascette per cavi</td><td>1</td><td>€7.99</td><td><a href="https://amzn.eu/d/asO3wVq" target="_blank">Vai</a></td></tr>
+          <tr><td>Cloud videocamere (1 anno)</td><td>1</td><td>€110.99</td><td><a href="https://www.tapo.com/it//tapocare/" target="_blank">Vai</a></td></tr>
+          <tr><td>Canaline a rete</td><td>25</td><td>€287.25</td><td><a href="https://amzn.eu/d/29h7AYV" target="_blank">Vai</a></td></tr>
+          <tr class="table-light">
             <td colspan="3" class="text-end"><strong>Totale stimato:</strong></td>
-            <td><strong>€3536,44</strong></td>
+            <td><strong>€3536.44</strong></td>
           </tr>
         </tbody>
       </table>
@@ -190,8 +130,8 @@
     <h2>Costi di Manodopera</h2>
     <p class="note">Stima dei costi legati al lavoro dei tecnici incaricati del progetto:</p>
     <div class="table-responsive">
-      <table class="table">
-        <thead>
+      <table class="table table-bordered align-middle">
+        <thead class="table-light">
           <tr>
             <th>Figura</th>
             <th>Ore</th>
@@ -200,25 +140,10 @@
           </tr>
         </thead>
         <tbody>
-          <tr>
-            <td>Tecnico cablaggio 1</td>
-            <td>40</td>
-            <td>€40</td>
-            <td>€1600</td>
-          </tr>
-          <tr>
-            <td>Tecnico cablaggio 2</td>
-            <td>40</td>
-            <td>€40</td>
-            <td>€1600</td>
-          </tr>
-          <tr>
-            <td>Tecnico software</td>
-            <td>20</td>
-            <td>€50</td>
-            <td>€1000</td>
-          </tr>
-          <tr>
+          <tr><td>Tecnico cablaggio 1</td><td>40</td><td>€40</td><td>€1600</td></tr>
+          <tr><td>Tecnico cablaggio 2</td><td>40</td><td>€40</td><td>€1600</td></tr>
+          <tr><td>Tecnico software</td><td>20</td><td>€50</td><td>€1000</td></tr>
+          <tr class="table-light">
             <td colspan="3" class="text-end"><strong>Totale manodopera:</strong></td>
             <td><strong>€4200</strong></td>
           </tr>
@@ -228,33 +153,79 @@
   </section>
 
   <section class="plant-section">
-    <h2>Descrizione del Lavoro</h2>
+    <h2>Piano di Rete</h2>
     <p>
-      I cavi LAN (come mostrato nell’immagine) partono dall’ufficio tecnico e salgono sul soffitto. Successivamente scendono dai muri e arrivano sotto la scrivania tramite canaline (25 in totale), dove sono posizionate le prese RJ45.
+      Il piano di rete è stato progettato per suddividere l'infrastruttura in sottoreti distinte...
     </p>
-    <p>
-      Esse permettono connessioni stabili e veloci, fondamentali per il corretto funzionamento di tutti i dispositivi dell’ufficio. Il primo locale tecnico contiene il router principale e due switch, mentre nelle altre aree sono distribuiti access point per il Wi-Fi.
-    </p>
+    <div class="table-responsive">
+      <table class="table table-bordered align-middle">
+        <thead class="table-light">
+          <tr>
+            <th>Rete</th>
+            <th>Indirizzo</th>
+            <th>Subnet Mask</th>
+            <th>DHCP / IP Statico</th>
+            <th>Indirizzi IP Statici</th>
+            <th>Gateway</th>
+            <th>DNS</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Telecamere (Wi-Fi)</td>
+            <td>192.168.2.0</td>
+            <td>/28</td>
+            <td>Statico</td>
+            <td>
+              192.168.2.10 - .13
+            </td>
+            <td>192.168.2.1</td>
+            <td>Configurati manualmente</td>
+          </tr>
+          <tr>
+            <td>Wi-Fi Ospiti (TV, mobile)</td>
+            <td>192.168.3.0</td>
+            <td>/26</td>
+            <td>DHCP<br/>Statico per TV: .65, .66</td>
+            <td>192.168.3.65, .66</td>
+            <td>192.168.3.1</td>
+            <td>DHCP Deco S7 o manuali</td>
+          </tr>
+          <tr>
+            <td>LAN Computer (59 PC)</td>
+            <td>192.168.4.0</td>
+            <td>/26</td>
+            <td>DHCP (da .10 a .60)</td>
+            <td>N/A</td>
+            <td>192.168.4.1</td>
+            <td>DHCP Deco S7</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
   </section>
 
   <section class="plant-section">
-    <h2>Dettagli aggiuntivi</h2>
-    <ul>
-      <li>Il primo (quello nel locale tecnico) è quello principale, gli altri due servono per estendere il segnale Wi-Fi nelle aree meno coperte.</li>
-      <li>Le telecamere sono tutte wireless e registrano in cloud.</li>
-      <li>Le due sale riunioni sono attrezzate con smart TV per videoconferenze.</li>
-      <li>Le stampanti sono collegate sia in Wi-Fi che via cavo LAN.</li>
-    </ul>
-  </section>
+  <h2>Note Finali</h2>
+  <ul>
+    <li>Le telecamere hanno la loro rete dedicata per garantirne la sicurezza e privacy;
+       Inoltre non serve nessun computer aggiuntivo perchè viene tutto salvato sul cloud offerto dal produttore della videocamera</li>
+    <li>Come spiegato inizialmente i router funzionano a sistema mesh; Il primo 
+      (quello nel locale tecnico) è quello principale, gli altri due servono ed estendere il segnale</li>
+    <li>Assicurarsi che il server DHCP non assegni indirizzi IP in conflitto con quelli statici.</li>
+    <li>Le stampanti si connetteranno semplicemente alla rete ospiti(come le TV)</li>
+    <li>Effettuare aggiornamenti firmware periodici su tutti i dispositivi di rete per mantenere sicurezza e stabilità.</li>
+  </ul>
+</section>
 
-  <section class="plant-section text-center">
-    <small>Realizzato da <strong>Andrea Nicolai</strong> e <strong>Mohamed Elmekawy</strong></small>
-  </section>
 
 </main>
 
-<!-- Bootstrap JS bundle (Popper incluso) -->
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<footer>
+  Progetto realizzato da <strong>Andrea Nicolai</strong> e <strong>Mohamed Elmekawy</strong>
+</footer>
 
+<!-- Bootstrap JS (facoltativo per alcune funzioni) -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
