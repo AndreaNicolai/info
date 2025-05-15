@@ -69,7 +69,11 @@
   <section class="plant-section">
     <h2>Piantina dell'Ufficio</h2>
     <p class="note">
-      Le linee verdi indicano i cavi LAN che si collegano alle prese RJ45...
+      Le linee verdi indicano i cavi LAN che si collegano alle prese RJ45. 
+      Nell'ufficio tecnico sono presenti 2 switch e il router principale. 
+      Nelle due sale riunioni è presente una TV. 
+      Nell'ufficio vi sono quattro telecamere e due router configurati come Access Point per garantire copertura Wi-Fi in tutto l'ambiente. 
+      Inoltre ci sono 2 stampanti a disposizione dei dipendenti.
     </p>
     <div class="canva-embed">
       <iframe loading="lazy" src="https://www.canva.com/design/DAGnOknkwvA/Wxm68D08NN3OtRm3Q21BGw/view?embed" allowfullscreen></iframe>
@@ -151,58 +155,82 @@
       </table>
     </div>
   </section>
+  <section class="plant-section">
+    <h2>Descrizione del Lavoro</h2>
+    <p>
+      Questo progetto di <strong>progettazione fisica di rete</strong> è stato sviluppato per un ambiente ufficio moderno e connesso, con l'obiettivo di garantire una copertura di rete completa, sia cablata che wireless. 
+      La soluzione prevede l'utilizzo di dispositivi di rete professionali, come switch, router mesh e access point, in grado di soddisfare le esigenze di connettività di tutti i dipendenti.
+    </p>
+    <p>
+      La rete è progettata per essere affidabile, scalabile e sicura. I cavi LAN(come visto nell'immagine)partono dall'ufficio tecnico e salgono sul soffitto, in seguito raggiungeranno le prese RJ45 scendendo dai muri e arriveranno sotto la scrivania tramite una canalina per ogni cavo che scende dal muro(25 in totale),
+       dove sono situate le prese.Esse permettono connessioni stabili per i PC fissi e i dispositivi che necessitano alta velocità e bassa latenza, mentre la copertura Wi-Fi garantita dai router configurati come access point assicura flessibilità e mobilità all’interno dell’ufficio.
+    </p>
+    <p>
+      Inoltre, sono stati previsti dispositivi per migliorare l’efficienza e la sicurezza dell’ambiente di lavoro, come stampanti condivise, telecamere di videosorveglianza(con una rete dedicata) e TV per le sale riunioni.
+    </p>
+  </section>
 
   <section class="plant-section">
     <h2>Piano di Rete</h2>
     <p>
-      Il piano di rete è stato progettato per suddividere l'infrastruttura in sottoreti distinte...
+       Il piano di rete è stato progettato per suddividere l'infrastruttura in sottoreti distinte, ognuna dedicata a specifiche funzioni e dispositivi. 
+      Questa segmentazione permette di ottimizzare la gestione del traffico, migliorare la sicurezza e garantire un'efficiente assegnazione degli indirizzi IP. 
+      Le telecamere, i dispositivi degli ospiti (come TV e smartphone) e i computer cablati sono organizzati in reti separate, con configurazioni IP statiche o DHCP a seconda delle necessità operative. 
+      L'indirizzo del gateway è stato scelto come primo indirizzo utilizzabile di ogni subnet, e il DNS viene gestito principalmente dal server DHCP del router mesh Deco S7, con configurazioni manuali solo dove necessario.
     </p>
     <div class="table-responsive">
-      <table class="table table-bordered align-middle">
-        <thead class="table-light">
-          <tr>
-            <th>Rete</th>
-            <th>Indirizzo</th>
-            <th>Subnet Mask</th>
-            <th>DHCP / IP Statico</th>
-            <th>Indirizzi IP Statici</th>
-            <th>Gateway</th>
-            <th>DNS</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>Telecamere (Wi-Fi)</td>
-            <td>192.168.2.0</td>
-            <td>/28</td>
-            <td>Statico</td>
-            <td>
-              192.168.2.10 - .13
-            </td>
-            <td>192.168.2.1</td>
-            <td>Configurati manualmente</td>
-          </tr>
-          <tr>
-            <td>Wi-Fi Ospiti (TV, mobile)</td>
-            <td>192.168.3.0</td>
-            <td>/26</td>
-            <td>DHCP<br/>Statico per TV: .65, .66</td>
-            <td>192.168.3.65, .66</td>
-            <td>192.168.3.1</td>
-            <td>DHCP Deco S7 o manuali</td>
-          </tr>
-          <tr>
-            <td>LAN Computer (59 PC)</td>
-            <td>192.168.4.0</td>
-            <td>/26</td>
-            <td>DHCP (da .10 a .60)</td>
-            <td>N/A</td>
-            <td>192.168.4.1</td>
-            <td>DHCP Deco S7</td>
-          </tr>
-        </tbody>
-      </table>
-    </div>
+  <table class="table table-bordered align-middle">
+    <thead class="table-light">
+      <tr>
+        <th>Rete</th>
+        <th>Indirizzo</th>
+        <th>Subnet Mask</th>
+        <th>DHCP / IP Statico</th>
+        <th>Indirizzi IP Statici</th>
+        <th>Gateway</th>
+        <th>DNS</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Rete Telecamere (Wi-Fi)</td>
+        <td>192.168.2.0</td>
+        <td>255.255.255.240 (/28)</td>
+        <td>Statico</td>
+        <td>
+          Telecamera 1: 192.168.2.10<br/>
+          Telecamera 2: 192.168.2.11<br/>
+          Telecamera 3: 192.168.2.12<br/>
+          Telecamera 4: 192.168.2.13
+        </td>
+        <td>192.168.2.1</td>
+        <td>Server DNS configurati manualmente sulle telecamere</td>
+      </tr>
+      <tr>
+        <td>Rete Wi-Fi Ospiti (TV e dispositivi)</td>
+        <td>192.168.3.0</td>
+        <td>255.255.255.192 (/26)</td>
+        <td>
+          DHCP (da 192.168.3.2 a 192.168.3.62)<br/>
+          Statico opzionale per TV: 192.168.3.65, 192.168.3.66
+        </td>
+        <td>TV opzionali: 192.168.3.65, 192.168.3.66</td>
+        <td>192.168.3.1</td>
+        <td>DNS impostati dal DHCP del Deco PX50 o manuali sulle TV con IP statico</td>
+      </tr>
+      <tr>
+        <td>Rete LAN Computer (Cablata - 59 PC)</td>
+        <td>192.168.4.0</td>
+        <td>255.255.255.192 (/26)</td>
+        <td>DHCP (da 192.168.4.10 a 192.168.4.70)</td>
+        <td>N/A (assegnati via DHCP)</td>
+        <td>192.168.4.1</td>
+        <td>DNS impostati dal DHCP del Deco PX50</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
   </section>
 
   <section class="plant-section">
