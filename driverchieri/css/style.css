@@ -14,7 +14,7 @@ h1, h2, h3, .navbar-brand {
 
 /* Navbar */
 .navbar {
-  background: #0d1b2a;
+  background: #467c9b;
   transition: background 0.3s ease;
 }
 .navbar .nav-link {
