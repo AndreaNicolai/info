@@ -26,7 +26,7 @@ h1, h2, h3, .navbar-brand {
   color: #1b98e0;
 }
 .navbar.scrolled {
-  background: rgba(13, 27, 42, 0.95);
+  background: rgba(80, 157, 239, 0.95);
 }
 
 /* Hero */
@@ -102,3 +102,27 @@ footer {
     font-size: 1rem;
   }
 }
+/* Servizi Offerti */
+.servizio-card {
+  background: #f8f9fa;
+  transition: transform 0.3s, box-shadow 0.3s;
+  border: 1px solid #dee2e6;
+}
+.servizio-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+}
+.servizio-card i {
+  color: #1b98e0;
+  margin-bottom: 10px;
+}
+.servizio-card h5 {
+  margin-bottom: 10px;
+  font-weight: 600;
+  color: #0d1b2a;
+}
+.servizio-card p {
+  font-size: 0.95rem;
+  color: #495057;
+}
+
